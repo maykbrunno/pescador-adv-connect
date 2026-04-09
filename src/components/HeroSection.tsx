@@ -84,7 +84,7 @@ const HeroSection = () => {
         </p>
 
         {/* Save Contact Button */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center justify-center gap-3">
           <button
             onClick={saveContact}
             className="inline-flex items-center gap-2 bg-gold-gradient px-8 py-3 rounded-full text-primary-foreground font-body font-semibold text-base hover:opacity-90 transition-opacity shadow-lg"
