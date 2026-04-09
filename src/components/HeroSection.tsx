@@ -6,7 +6,7 @@ import logoImg from "@/assets/logo-advocacia.png";
 const saveContact = () => {
   const vcard = `BEGIN:VCARD
 VERSION:3.0
-FN:Lucas Magalhães Leite - Advogado
+FN:Lucas Magalhães - Advogado
 TEL;TYPE=CELL:+5586994291801
 EMAIL:advlm.pi@outlook.com
 ADR;TYPE=WORK:;;Rua Laurentino Araújo, 255;Luís Correia;PI;64220-000;Brasil
@@ -60,11 +60,11 @@ const HeroSection = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="text-center z-10"
       >
-        <p className="text-muted-foreground text-sm tracking-widest uppercase mb-2 font-body">
-          Referência em Advocacia
+        <p className="text-primary text-sm md:text-base tracking-wide uppercase mb-2 font-body font-semibold">
+          Advocacia Especializada em Direito Previdenciário para Pescadores
         </p>
         <h1 className="text-3xl md:text-5xl font-display font-bold text-foreground leading-tight mb-2">
-          Lucas Magalhães <br /> Leite
+          Lucas Magalhães
         </h1>
         <p className="text-primary text-base md:text-lg font-body font-medium mb-1">
           @_lucasmagalhaesadv
