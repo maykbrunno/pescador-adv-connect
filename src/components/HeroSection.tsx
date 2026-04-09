@@ -6,7 +6,7 @@ import logoImg from "@/assets/logo-advocacia.png";
 const saveContact = () => {
   const vcard = `BEGIN:VCARD
 VERSION:3.0
-FN:Lucas Magalhães Leite - Advogado
+FN:Lucas Magalhães - Advogado
 TEL;TYPE=CELL:+5586994291801
 EMAIL:advlm.pi@outlook.com
 ADR;TYPE=WORK:;;Rua Laurentino Araújo, 255;Luís Correia;PI;64220-000;Brasil
