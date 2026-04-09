@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { UserPlus } from "lucide-react";
+import { UserPlus, MessageCircle } from "lucide-react";
 import lucasImg from "@/assets/lucas-principal.png";
 import logoImg from "@/assets/logo-advocacia.png";
 
@@ -27,14 +27,24 @@ END:VCARD`;
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background px-4 py-12">
-      {/* Logo */}
+      {/* Logo with faded background */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="mb-6 z-10"
+        className="mb-6 z-10 relative"
       >
-        <img src={logoImg} alt="Lucas Magalhães - Advocacia Previdenciária" className="h-16 md:h-20 w-auto" />
+        <div className="relative overflow-hidden rounded-lg">
+          <img src={logoImg} alt="Lucas Magalhães - Advocacia Previdenciária" className="h-16 md:h-20 w-auto relative z-10" />
+          <div className="absolute inset-0 pointer-events-none" style={{
+            background: 'radial-gradient(ellipse at center, transparent 30%, hsl(30 10% 8%) 85%)',
+          }} />
+          <div className="absolute inset-0 pointer-events-none" style={{
+            maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
+            background: 'linear-gradient(to bottom, transparent 0%, hsl(30 10% 8%) 100%)',
+          }} />
+        </div>
       </motion.div>
 
       {/* Photo */}
@@ -74,13 +84,24 @@ const HeroSection = () => {
         </p>
 
         {/* Save Contact Button */}
-        <button
-          onClick={saveContact}
-          className="inline-flex items-center gap-2 bg-gold-gradient px-8 py-3 rounded-full text-primary-foreground font-body font-semibold text-base hover:opacity-90 transition-opacity shadow-lg"
-        >
-          <UserPlus className="w-5 h-5" />
-          Salvar Contato
-        </button>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={saveContact}
+            className="inline-flex items-center gap-2 bg-gold-gradient px-8 py-3 rounded-full text-primary-foreground font-body font-semibold text-base hover:opacity-90 transition-opacity shadow-lg"
+          >
+            <UserPlus className="w-5 h-5" />
+            Salvar Contato
+          </button>
+          <a
+            href="https://wa.me/5586994291801"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 rounded-full bg-gold-gradient flex items-center justify-center hover:opacity-90 transition-opacity shadow-lg"
+            aria-label="WhatsApp"
+          >
+            <MessageCircle className="w-5 h-5 text-primary-foreground" />
+          </a>
+        </div>
       </motion.div>
 
       {/* Scroll indicator */}
