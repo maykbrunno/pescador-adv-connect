@@ -34,17 +34,7 @@ const HeroSection = () => {
         transition={{ duration: 0.6 }}
         className="mb-6 z-10 relative"
       >
-        <div className="relative overflow-hidden rounded-lg">
-          <img src={logoImg} alt="Lucas Magalhães - Advocacia Previdenciária" className="h-16 md:h-20 w-auto relative z-10" />
-          <div className="absolute inset-0 pointer-events-none" style={{
-            background: 'radial-gradient(ellipse at center, transparent 30%, hsl(30 10% 8%) 85%)',
-          }} />
-          <div className="absolute inset-0 pointer-events-none" style={{
-            maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
-            background: 'linear-gradient(to bottom, transparent 0%, hsl(30 10% 8%) 100%)',
-          }} />
-        </div>
+        <img src={logoImg} alt="Lucas Magalhães - Advocacia Previdenciária" className="h-20 md:h-28 w-auto" />
       </motion.div>
 
       {/* Photo */}
