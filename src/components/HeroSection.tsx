@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { UserPlus, MessageCircle } from "lucide-react";
-import lucasImg from "@/assets/lucas-principal.png";
-import logoImg from "@/assets/logo-advocacia.png";
+import lucasImg from "@/assets/perfil.jpeg";
+import logoImg from "@/assets/FUNDO_ESCURO.svg";
 
 const saveContact = () => {
   const vcard = `BEGIN:VCARD
@@ -33,13 +33,13 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex justify-center md:justify-start mb-8 z-10 relative"
+          className="flex justify-center md:justify-start mb-0 md:-mb-16 z-10 relative"
         >
-          <img src={logoImg} alt="Lucas Magalhães - Advocacia Previdenciária" className="h-20 md:h-28 w-auto" />
+          <img src={logoImg} alt="Lucas Magalhães - Advocacia Previdenciária" className="w-[320px] md:w-[600px] h-auto object-contain scale-125 md:scale-110" />
         </motion.div>
 
         {/* Hero Content — split on desktop */}
-        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-16">
           {/* Text — left on desktop */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -47,36 +47,28 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex-1 text-center md:text-left order-2 md:order-1"
           >
-            <p className="text-primary text-xs md:text-sm tracking-[0.12em] uppercase mb-3 font-body font-semibold">
-              Advocacia Especializada em Direito Previdenciário
-            </p>
-            <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground leading-tight mb-3">
+            <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground leading-tight mb-3 mt-4 md:mt-0">
               Lucas Magalhães
             </h1>
-            <p className="text-foreground text-base md:text-xl font-body font-medium mb-2">
-              Seu direito previdenciário defendido com especialidade.
-            </p>
-            <p className="text-muted-foreground text-sm md:text-base font-body mb-8">
-              Especialista em benefícios para Pescadores Artesanais · OAB/PI
+            <p className="text-foreground text-base md:text-xl font-body font-medium mb-8">
+              Escritório especializado em garantir Direitos Previdenciários
             </p>
 
-            {/* CTAs — Salvar Contato dourado principal + ícone WhatsApp circular */}
-            <div className="flex items-center justify-center md:justify-start gap-3">
+            {/* CTAs */}
+            <div className="flex items-center justify-center md:justify-start gap-4 w-full">
               <button
                 onClick={saveContact}
-                className="inline-flex items-center gap-2 bg-gold-gradient px-8 py-3 rounded-full text-primary-foreground font-body font-semibold text-base hover:opacity-90 transition-opacity shadow-lg"
+                className="inline-flex flex-1 md:flex-none items-center justify-center gap-2 bg-gold-gradient px-6 py-3 rounded-full text-primary-foreground font-body font-semibold text-sm md:text-base hover:opacity-90 transition-opacity shadow-lg"
               >
                 <UserPlus className="w-5 h-5" />
                 Salvar Contato
               </button>
               <a
-                href="https://wa.me/5586994291801"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-gold-gradient flex items-center justify-center hover:opacity-90 transition-opacity shadow-lg"
-                aria-label="WhatsApp"
+                href="#tipos-de-segurados"
+                className="inline-flex flex-1 md:flex-none items-center justify-center gap-2 bg-gold-gradient px-6 py-3 rounded-full text-primary-foreground font-body font-semibold text-sm md:text-base hover:opacity-90 transition-opacity shadow-lg"
               >
-                <MessageCircle className="w-5 h-5 text-primary-foreground" />
+                Fale Conosco
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
               </a>
             </div>
           </motion.div>
@@ -88,7 +80,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative order-1 md:order-2 flex-shrink-0"
           >
-            <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-primary shadow-2xl">
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary shadow-2xl">
               <img
                 src={lucasImg}
                 alt="Lucas Magalhães Leite"

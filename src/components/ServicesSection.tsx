@@ -1,33 +1,40 @@
 import { motion } from "framer-motion";
-import previdenciaImg from "@/assets/previdencia-bg.jpg";
+import previdenciaImg from "@/assets/urbano-bg.png";
 import pescadorImg from "@/assets/pescador-bg.jpg";
-import servicosImg from "@/assets/servicos-bg.jpg";
+import servicosImg from "@/assets/assistenciais-bg.png";
+import lavradorImg from "@/assets/lavrador-bg.png";
 
 const services = [
   {
-    title: "Direito\nPrevidenciário",
-    description: "Atuação especializada na defesa dos direitos sociais e previdenciários, com foco em aposentadorias, auxílios e benefícios do INSS.",
+    title: "Segurado\nUrbano",
+    description: "Atuação especializada em benefícios para segurados urbanos do INSS, aposentadorias, auxílios e perícias.",
     image: previdenciaImg,
-    href: "https://wa.me/5586994291801?text=Olá%20Lucas%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20consulta%20sobre%20Direito%20Previdenciário.",
+    href: "https://wa.me/5586994291801?text=Olá%20Lucas%2C%20tenho%20dúvidas%20sobre%20benefícios%20para%20Segurado%20Urbano.%20Posso%20conversar%3F",
   },
   {
-    title: "Pescadores\nArtesanais",
-    description: "Especialista em benefícios previdenciários para pescadores artesanais, incluindo seguro-defeso e aposentadoria especial.",
+    title: "Pescador\nArtesanal",
+    description: "Especialista em benefícios previdenciários para pescadores artesanais, seguro-defeso e demais direitos da categoria.",
     image: pescadorImg,
-    href: "https://wa.me/5586994291801?text=Olá%20Lucas%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20consulta%20sobre%20Pescadores%20Artesanais.",
+    href: "https://wa.me/5586994291801?text=Olá%20Lucas%2C%20sou%20pescador%20artesanal%20e%20gostaria%20de%20saber%20mais%20sobre%20meus%20direitos%20previdenciários.",
   },
   {
-    title: "Serviços\nJurídicos",
-    description: "Consultoria jurídica completa em direito previdenciário. Análise de casos, recursos administrativos e ações judiciais.",
+    title: "Trabalhador\nRural",
+    description: "Assessoria completa para trabalhadores rurais em aposentadorias, auxílio-doença, salário-maternidade e demais benefícios do INSS.",
+    image: lavradorImg,
+    href: "https://wa.me/5586994291801?text=Olá%20Lucas%2C%20sou%20trabalhador%20rural%20e%20gostaria%20de%20saber%20mais%20sobre%20meus%20direitos%20previdenciários.",
+  },
+  {
+    title: "Benefícios\nAssistenciais",
+    description: "Atuação completa em BPC-LOAS, benefícios para pessoas com autismo, deficiência e demais benefícios assistenciais.",
     image: servicosImg,
-    href: "https://wa.me/5586994291801?text=Olá%20Lucas%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20consulta%20sobre%20Serviços%20Jurídicos.",
+    href: "https://wa.me/5586994291801?text=Olá%20Lucas%2C%20tenho%20interesse%20em%20benefícios%20assistenciais.%20Gostaria%20de%20esclarecer%20dúvidas.",
   },
 ];
 
 const ServicesSection = () => {
   return (
-    <section className="py-16 px-4 bg-background">
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+    <section id="tipos-de-segurados" className="py-16 px-4 bg-background">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((service, i) => (
           <motion.div
             key={service.title}
@@ -45,17 +52,17 @@ const ServicesSection = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/60 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6">
-              <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground whitespace-pre-line leading-tight mb-2">
+              <h2 className="text-xl md:text-2xl font-display font-bold text-foreground whitespace-pre-line leading-tight mb-2">
                 {service.title}
               </h2>
-              <p className="text-muted-foreground text-sm font-body mb-4 line-clamp-3">
+              <p className="text-muted-foreground text-xs md:text-sm font-body mb-4 line-clamp-3">
                 {service.description}
               </p>
               <a
                 href={service.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-gold-gradient px-6 py-2 rounded-full text-primary-foreground font-body font-semibold text-sm hover:opacity-90 transition-opacity"
+                className="inline-block bg-gold-gradient px-4 py-2 rounded-full text-primary-foreground font-body font-semibold text-xs md:text-sm hover:opacity-90 transition-opacity"
               >
                 Fale Conosco
               </a>

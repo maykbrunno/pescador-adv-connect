@@ -1,9 +1,13 @@
 import { Instagram, MessageCircle, Mail } from "lucide-react";
+import logoImg from "@/assets/FUNDO_ESCURO.svg";
 
 const ContactFooter = () => {
   return (
     <footer className="py-12 px-4 bg-card border-t border-border">
       <div className="max-w-5xl mx-auto">
+        <div className="flex justify-center mb-8">
+          <img src={logoImg} alt="Lucas Magalhães - Advocacia Previdenciária" className="w-48 md:w-72 h-auto object-contain" />
+        </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           {/* WhatsApp — único colorido */}
           <a

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import sobreImg from "@/assets/sobre-mim.png";
+import sobreImg from "@/assets/quem_sou.jpeg";
 
 const AboutSection = () => {
   return (
@@ -11,7 +11,7 @@ const AboutSection = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-display font-bold text-foreground text-center mb-10"
         >
-          Quem sou eu
+          Quem somos nós
         </motion.h2>
 
         <div className="md:flex md:items-center md:gap-12">
@@ -39,12 +39,10 @@ const AboutSection = () => {
           >
             <div className="space-y-3">
               {[
-                "Advogado há 05 anos",
-                "Sócio proprietário do Lucas Magalhães Escritório de Advocacia Previdenciária",
-                "Especialista em benefícios previdenciários para Pescadores Artesanais",
-                "Presidente da Comissão de Direito Previdenciário da OAB Subseção Parnaíba-PI",
-                "Fã de basquete, futebol e musculação",
-                "Adoro viajar",
+                "Larga experiência em casos previdenciários;",
+                "Atuamos com todos os tipos de segurados da Previdência, assim como BPC-LOAS e demais benefícios assistenciais em todo Brasil;",
+                "Amplo conhecimento em casos de Pescadores Artesanais e Lavradores;",
+                "Atendimento humanizado e personalizado de acordo com as necessidades específicas de cada cliente;",
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span className="mt-1 w-2 h-2 rounded-full bg-primary flex-shrink-0" />
@@ -54,9 +52,6 @@ const AboutSection = () => {
                 </div>
               ))}
             </div>
-            <p className="text-muted-foreground text-sm italic font-body pt-4 border-t border-border">
-              "Acredito que com estudo e boa vontade, todos podem ir além de qualquer expectativa."
-            </p>
           </motion.div>
         </div>
       </div>

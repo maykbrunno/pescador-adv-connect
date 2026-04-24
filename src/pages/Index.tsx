@@ -1,8 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
-import StatsSection from "@/components/StatsSection";
 import AboutSection from "@/components/AboutSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import LocationSection from "@/components/LocationSection";
 import ContactFooter from "@/components/ContactFooter";
 
@@ -11,9 +9,7 @@ const Index = () => {
     <main className="bg-background min-h-screen">
       <HeroSection />
       <ServicesSection />
-      <StatsSection />
       <AboutSection />
-      <TestimonialsSection />
       <LocationSection />
       <ContactFooter />
     </main>
